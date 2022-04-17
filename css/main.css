@@ -78,4 +78,14 @@ h1 a:hover{
   color:#2d9884;
   text-decoration:none;
 }
-
+.Baslik{
+  font: 50px black bold;
+  margin-top: 3%;
+  
+}
+.Ortala{
+  text-align: center;
+}
+#NavUl{
+  float:left;
+}

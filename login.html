@@ -21,21 +21,16 @@
     <div class="row">
 
 
-        <div class="col-sm-4">
-
-        </div>
+    
         <div class="col-sm-4 mt-5 ">
             <div width="300px"><a
                 href="hakkimda.html"  class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Giriş Yapmadan Devam Et</a>
         </div>
         
             <hr class="trans--grow hr1 mt-5">
-            <p id="message"></p>
             <div class="card">
-                
                 <div class="card-body">
-                    
-                    <form id="form1">
+                    <form>
                        
                         <div class="form-group">
 
@@ -51,7 +46,7 @@
                             <label class="ml-2" id="sifremiUnuttum" data-toggle="modal" data-target="#modelId">Şifreni
                                 mi Unuttun?</label> <br>
                             <div width="300px"><a
-                                    id="adminGiris" href="admin.html"><input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Giriş"></a>
+                                    id="adminGiris" href=""><input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Giriş"></a>
                             </div>
                             <label class="mt-2" id="kaydol" data-toggle="modal" data-target="#Kaydol">Hesabın Yok mu ?
                                 Hemen Üye Olmak İçin Tıkla!</label>
@@ -66,7 +61,7 @@
         </div>
         
     </div>
-    <a href="index.html" id="gizliButon">1</a>
+ 
 
 
     <!-- Modal -->
@@ -111,12 +106,6 @@
 
         });
     </script>
-
-
-
-
-
-    
     <div class="modal fade" id="Kaydol" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -166,51 +155,21 @@
         $('#exampleModal').on('show.bs.modal', event => {
             var button = $(event.relatedTarget);
             var modal = $(this);
-              
+            // Use above variables to manipulate the DOM       
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        function ValidateEmail(txtKullaniciAdi)
-            {
-                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                if(inputText.value.match(mailformat))
-                {
-                    alert("Valid email address!");
-                    document.form1.txtKullaniciAdi.focus();
-                    return true;
-                }
-                else
-                {
-                    alert("You have entered an invalid email address!");
-                    document.form1.text1.focus();
-                    return false;
-                 }
-            }
         $(function () {
             var x = 0;
 
             $("#adminGiris").click(function () {
-                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                if(txtKullaniciAdi.value.match(mailformat))
-                {
-                    alert("Valid email address!");
-                    document.form1.txtKullaniciAdi.focus();
-                    return true;
-                }
-                else
-                {
-                    alert("You have entered an invalid email address!");
-                    document.form1.text1.focus();
-                    return false;
-                }
+
                 var kul = $("#txtKullaniciAdi").val();
                 var sif = $("#txtSifre").val();
                 if (kul == "ogr" || sif == "ogr") {
-                    $(location).attr('href', 'index.html');
-                    // $("#gizliButon").trigger("click") bunu denemiştim uzunca bir zaman olmayınca yukarıdaki gibi yaptım.
-
+                    $(location).attr('href', 'girisKontrol.php');
                     return false;
 
 
@@ -251,7 +210,7 @@
                 denemeHakki -= 1;
                 if (denemeHakki <= 0) {
                     $("#basariliYadaBasarisizKaydol").html("5 DAKİKA CEZALISIN!")
-                    $("#yeniKayit").addClass("gizliButon2")
+                
                 }
             } else if (yen != sif) {
 
@@ -261,7 +220,7 @@
                 $("#txtYeniSifre").val("");
                 if (denemeHakki <= 0) {
                     $("#basariliYadaBasarisizKaydol").html("5 DAKİKA CEZALISIN!")
-                    $("#yeniKayit").addClass("gizliButon2")
+                    
                 }
                 return false
             } else {
