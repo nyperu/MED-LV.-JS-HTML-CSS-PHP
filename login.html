@@ -21,20 +21,20 @@
     <div class="row">
 
 
-    
-        <div class="col-sm-4 mt-5 ">
-            <div width="300px"><a
+    <div class="container">
+        <div class=" mt-5 ">
+            <div width=""><a
                 href="hakkimda.html"  class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Giriş Yapmadan Devam Et</a>
         </div>
         
             <hr class="trans--grow hr1 mt-5">
             <div class="card">
                 <div class="card-body">
-                    <form>
+                    <form action="loginKontrol.php">
                        
                         <div class="form-group">
 
-                            <label for="exampleInputEmail1">Kullanıcı Adı:</label>
+                            <label for="txtKullaniciAdi">Kullanıcı Adı:</label>
                             <input type="text" class="form-control" id="txtKullaniciAdi">
                         </div>
                         <div class="form-group">
@@ -42,17 +42,18 @@
                             <input type="password" class="form-control" id="txtSifre">
                         </div>
                         <p class=" text-danger yazilar" id="girisBasariliKontrol"></p>
-                        <div class=" text-center btn-link">
-                            <label class="ml-2" id="sifremiUnuttum" data-toggle="modal" data-target="#modelId">Şifreni
+                        <div class="text-center btn-link">
+                            <label class="ml-2" id="sifremiUnuttum" data-toggle="modal" data-target="#sifrenimiUnuttunModali">Şifreni
                                 mi Unuttun?</label> <br>
-                            <div width="300px"><a
-                                    id="adminGiris" href=""><input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Giriş"></a>
-                            </div>
-                            <label class="mt-2" id="kaydol" data-toggle="modal" data-target="#Kaydol">Hesabın Yok mu ?
-                                Hemen Üye Olmak İçin Tıkla!</label>
-                                
-                        </div>
+
+                                     <input type="submit" id="adminGiris" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Giriş">
+                            
+                           
                     </form>
+                    <label class="mt-2" id="kaydol" data-toggle="modal" data-target="#Kaydol">Hesabın Yok mu ?
+                        Hemen Üye Olmak İçin Tıkla!</label>
+                </div>
+                        
                 </div>
                 
             </div>
@@ -65,7 +66,7 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal fade" id="sifrenimiUnuttunModali" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-primary">
@@ -160,34 +161,7 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(function () {
-            var x = 0;
-
-            $("#adminGiris").click(function () {
-
-                var kul = $("#txtKullaniciAdi").val();
-                var sif = $("#txtSifre").val();
-                if (kul == "ogr" || sif == "ogr") {
-                    $(location).attr('href', 'girisKontrol.php');
-                    return false;
-
-
-                } else if (kul == "admin" && sif == "admin") {
-                    return true;
-                } else {
-                    alert("ID veya Şifre Hatalı!");
-                    x = x + 1;
-                    if (x == 2) {
-                        $("#girisBasariliKontrol").html(
-                            "Şifreni Mi Unuttun? Yoksa Üye Olmaya Ne Dersin?");
-                    }
-                    return false;
-                }
-            });
-
-        });
-    </script>
+    
     <!-- TABLO ALTI ÇİZGİSİNİN KAYMASI İÇİN -->
     <script>
         jQuery(document).ready(function ($) {
