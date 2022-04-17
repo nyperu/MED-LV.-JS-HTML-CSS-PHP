@@ -34,7 +34,7 @@
                 echo "Mail adresi geçerli.";   
                 echo "Kullanıcı adı ve şifre geçerli yönlendiriliyorsunuz.";
                 sleep(5);
-                
+                echo'<script> window.location="../../hakkimda.html"; </script> ';
             }
             else
             {
