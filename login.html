@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin  </title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">   
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary navbar-fixed-top">
+        <div class="container">
+        
+                <a class="navbar-brand" href="index.html">Sezer Berber Login</a>
+
+            
+        </div>
+    </nav>
+    <div class="row">
+
+
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4 mt-5 ">
+            <div width="300px"><a
+                href="hakkimda.html"  class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Giriş Yapmadan Devam Et</a>
+        </div>
+        
+            <hr class="trans--grow hr1 mt-5">
+            <p id="message"></p>
+            <div class="card">
+                
+                <div class="card-body">
+                    
+                    <form id="form1">
+                       
+                        <div class="form-group">
+
+                            <label for="exampleInputEmail1">Kullanıcı Adı:</label>
+                            <input type="text" class="form-control" id="txtKullaniciAdi">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Şifreniz:</label>
+                            <input type="password" class="form-control" id="txtSifre">
+                        </div>
+                        <p class=" text-danger yazilar" id="girisBasariliKontrol"></p>
+                        <div class=" text-center btn-link">
+                            <label class="ml-2" id="sifremiUnuttum" data-toggle="modal" data-target="#modelId">Şifreni
+                                mi Unuttun?</label> <br>
+                            <div width="300px"><a
+                                    id="adminGiris" href="admin.html"><input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Giriş"></a>
+                            </div>
+                            <label class="mt-2" id="kaydol" data-toggle="modal" data-target="#Kaydol">Hesabın Yok mu ?
+                                Hemen Üye Olmak İçin Tıkla!</label>
+                                
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            <hr class="trans--grow hr2">
+            
+        </div>
+        
+    </div>
+    <a href="index.html" id="gizliButon">1</a>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white">Şifreniz Mailinize Gönderilecektir.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+
+                        <div>
+                            <label for="text" class="mt-1">Kullanıcı Adı:</label>
+                            <input type="text" class="form-control" id="txtSifremiUnuttumK">
+                        </div>
+                        <div>
+                            <label for="exampleInputEmail1" class="mt-1">Mail Adresiniz:</label>
+                            <input type="text" class="form-control" id="txtSifremiUnuttum">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary">Gönder</button>
+                    <p class="yazilar" id="basariliYadaBasarisizUnuttum"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#exampleModal').on('show.bs.modal', event => {
+            var button = $(event.relatedTarget);
+            var modal = $(this);
+            // Use above variables to manipulate the DOM
+
+        });
+    </script>
+
+
+
+
+
+    
+    <div class="modal fade" id="Kaydol" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header  bg-primary">
+                    <h5 class="modal-title text-white">Kayıt Ol</h5>
+                    <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div>
+                            <label for="text" class="mt-1">Kullanıcı Adı:</label>
+                            <input type="text" class="form-control" id="txtYeniKullaniciAdi" maxlength="16">
+                        </div>
+                        <div>
+                            <label for="exampleInputPassword1" class="mt-1">Şifre:</label>
+                            <input type="password" class="form-control" id="txtYeniSifre" maxlength="10">
+                        </div>
+                        <div>
+                            <label for="exampleInputPassword2" class="mt-1">Şifreyi Tekrar Girin:</label>
+                            <input type="password" class="form-control" id="txtYeniSifreTekrar" maxlength="10">
+                        </div>
+                        <div>
+                            <label for="exampleInputEmail1" class="mt-1">Mail Adresiniz:</label>
+                            <input type="text" class="form-control" id="txtYeniMail">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p class="" id="basariliYadaBasarisizKaydol"></p>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary" id="yeniKayit">Kaydol</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer bg-primary mt-5 fixed-bottom" height="100px">
+        <div class="container">
+            <a href="http://20181132026.tk" class=" text-white"></a>
+            &copy; 2022 Sezer Berber
+            <!-- credits -->
+            <a class="#" title="Sezer Berber" target="_blank" href="#">
+        </div>
+    </footer>
+    <script>
+        $('#exampleModal').on('show.bs.modal', event => {
+            var button = $(event.relatedTarget);
+            var modal = $(this);
+              
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function ValidateEmail(txtKullaniciAdi)
+            {
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(inputText.value.match(mailformat))
+                {
+                    alert("Valid email address!");
+                    document.form1.txtKullaniciAdi.focus();
+                    return true;
+                }
+                else
+                {
+                    alert("You have entered an invalid email address!");
+                    document.form1.text1.focus();
+                    return false;
+                 }
+            }
+        $(function () {
+            var x = 0;
+
+            $("#adminGiris").click(function () {
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(txtKullaniciAdi.value.match(mailformat))
+                {
+                    alert("Valid email address!");
+                    document.form1.txtKullaniciAdi.focus();
+                    return true;
+                }
+                else
+                {
+                    alert("You have entered an invalid email address!");
+                    document.form1.text1.focus();
+                    return false;
+                }
+                var kul = $("#txtKullaniciAdi").val();
+                var sif = $("#txtSifre").val();
+                if (kul == "ogr" || sif == "ogr") {
+                    $(location).attr('href', 'index.html');
+                    // $("#gizliButon").trigger("click") bunu denemiştim uzunca bir zaman olmayınca yukarıdaki gibi yaptım.
+
+                    return false;
+
+
+                } else if (kul == "admin" && sif == "admin") {
+                    return true;
+                } else {
+                    alert("ID veya Şifre Hatalı!");
+                    x = x + 1;
+                    if (x == 2) {
+                        $("#girisBasariliKontrol").html(
+                            "Şifreni Mi Unuttun? Yoksa Üye Olmaya Ne Dersin?");
+                    }
+                    return false;
+                }
+            });
+
+        });
+    </script>
+    <!-- TABLO ALTI ÇİZGİSİNİN KAYMASI İÇİN -->
+    <script>
+        jQuery(document).ready(function ($) {
+            setTimeout(function () {
+                $('.trans--grow').addClass('grow');
+            }, 275);
+        });
+    </script>
+    <!-- FAZLA DENEME GİRİNCE BUTON YOK OLUYOR. -->
+    <script>
+        var denemeHakki = 3;
+        $("#yeniKayit").click(function () {
+            var yen = $("#txtYeniSifre").val();
+            var sif = $("#txtYeniSifreTekrar").val();
+            var kul = $("#txtYeniKullaniciAdi").val();
+            var mail = $("#txtYeniMail").val();
+
+            if (yen == "" || sif == "" || kul == "" || mail == "") {
+                $("#basariliYadaBasarisizKaydol").html("Hiçbir şeyi boş geçemezsin.").addClass("text-danger")
+                denemeHakki -= 1;
+                if (denemeHakki <= 0) {
+                    $("#basariliYadaBasarisizKaydol").html("5 DAKİKA CEZALISIN!")
+                    $("#yeniKayit").addClass("gizliButon2")
+                }
+            } else if (yen != sif) {
+
+                denemeHakki -= 1;
+                $("#basariliYadaBasarisizKaydol").html("Şifreler Uyuşmuyor!").addClass("text-danger")
+                $("#txtYeniSifreTekrar").val("");
+                $("#txtYeniSifre").val("");
+                if (denemeHakki <= 0) {
+                    $("#basariliYadaBasarisizKaydol").html("5 DAKİKA CEZALISIN!")
+                    $("#yeniKayit").addClass("gizliButon2")
+                }
+                return false
+            } else {
+                $("#basariliYadaBasarisizKaydol").html("Şifreler Uyuşmuyor!").removeClass("text-danger")
+                $("#basariliYadaBasarisizKaydol").html("Başarılı!").addClass("text-success")
+            }
+        });
+    </script>
+</body>
+</html>
