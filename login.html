@@ -13,24 +13,39 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary navbar-fixed-top">
-        <div class="container">
-        
-                <a class="navbar-brand" href="index.html">Sezer Berber Login</a>
-
-            
-        </div>
+    <nav class="navbar navbar-dark bg-dark text-white navbar-expand-lg navbar-fixed-top">
+        <div class="container py-2"> 
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-" aria-controls="navbar-">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-item nav-link text-white" href="hakkimda.html">Hakkımda</a>
+                    </li>
+                    <li><a class="nav-item nav-link text-white" href="egitim.html">Eğitim</a>
+                    </li>
+                    <li><a class="nav-item nav-link text-white" href="sehrim.html">Şehrim</a>
+                    </li>
+                    <li><a class="nav-item nav-link text-white" href="miras.html">Mirasımız</a>
+                    </li>
+                    <li>   <a class="nav-item nav-link text-white" href="ilgiAlanlarim.html">Hobilerim</a>
+                    </li>
+                    <li>  <a class="nav-item nav-link text-white" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        <div> 
+                 
     </nav>
-    <div class="row">
-
+    
 
     <div class="container">
         <div class=" mt-5 ">
             <div width=""><a
-                href="hakkimda.html"  class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Giriş Yapmadan Devam Et</a>
+                href="hakkimda.html"  class="btn btn-block btn-dark bg-dark btn-lg font-weight-medium auth-form-btn">Giriş Yapmadan Devam Et</a>
         </div>
         
-            <hr class="trans--grow hr2" id="trans--grow">
+            <hr class="trans--grow hr2 bg-dark" id="trans--grow">
             <div class="card">
                 <div class="card-body">
                     <form action="hakkimda.php" method="post">
@@ -45,11 +60,11 @@
                             <input type="password" class="form-control" id="txtSifre" name="sifre">
                         </div>
                         <p class=" text-danger yazilar" id="girisBasariliKontrol"></p>
-                        <input type="submit" id="Giris" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Giriş">
+                        <input type="submit" id="Giris" class="btn btn-block btn-dark bg-dark btn-lg font-weight-medium auth-form-btn" value="Giriş">
                             <br>
                         </form>
                             <div class="text-center btn-link">
-                            <label class="ml-2" id="sifremiUnuttum" data-toggle="modal" data-target="#sifrenimiUnuttunModali">Şifreni
+                            <label class="" id="sifremiUnuttum" data-toggle="modal" data-target="#sifrenimiUnuttunModali">Şifreni
                                 mi Unuttun?</label> <br>
                             
                            
@@ -58,11 +73,11 @@
                         Hemen Üye Olmak İçin Tıkla!</label>
                 </div>
                         
-                </div>
+            </div>
                 
             </div>
             
-            <hr class="trans--grow hr1"  id="trans--grow">
+            <hr class="trans--grow hr1 bg-dark"  id="trans--grow">
             
         </div>
         
@@ -142,7 +157,7 @@
             </div>
         </div>
     </div>
-    <footer class="footer bg-primary mt-5 fixed-bottom" height="100px">
+    <footer class="footer btn-dark bg-dark text-white mt-5 fixed-bottom" height="100px">
         <div class="container">
             <a href="http://20181132026.tk" class=" text-white"></a>
             &copy; 2022 Sezer Berber
@@ -238,4 +253,3 @@ else if(y.length<8){
 });</script>
 </body>
 </html>
-lorem*3
