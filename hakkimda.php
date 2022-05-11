@@ -42,12 +42,12 @@
             {
                 
                 
-                echo'<script> alert("Sistemde kayitli olmayan mail adresi."); window.location="../../login.html"; </script> ';
+                echo'<script> alert("Sistemde kayitli olmayan mail adresi."); window.location="../../index.html"; </script> ';
             }
         }
         else{
-            echo'<script> alert("Sistemde kayitli olmayan sifre veya mail adresi."); window.location="../../login.html"; </script> ';
-            echo'<script> window.location="../../login.html"; </script> ';
+            echo'<script> alert("Sistemde kayitli olmayan sifre veya mail adresi."); window.location="../../index.html"; </script> ';
+            echo'<script> window.location="../../index.html"; </script> ';
         }
         
        ?>
