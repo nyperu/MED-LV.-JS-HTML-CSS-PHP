@@ -59,7 +59,7 @@
                             <label for="exampleInputPassword1">Şifreniz:</label>
                             <input type="password" class="form-control" id="txtSifre" name="sifre">
                         </div>
-                        <p class=" text-danger yazilar" id="girisBasariliKontrol"></p>
+                        <p class="text-danger yazilar" id="girisBasariliKontrol"></p>
                         <input type="submit" id="Giris" class="btn btn-block btn-dark bg-dark btn-lg font-weight-medium auth-form-btn" value="Giriş">
                             <br>
                         </form>
@@ -210,15 +210,15 @@
             $("#basariliYadaBasarisizKaydol").html("Şifreler Uyuşmuyor!").addClass("text-danger")
             $("#txtYeniSifreTekrar").val("");
             $("#txtYeniSifre").val("");
-            if (denemeHakki <= 0) {
+            if (denemeHakki <= 0)  {
                 $("#basariliYadaBasarisizKaydol").html("5 DAKİKA CEZALISIN!")
                 
             }
             return false
         } else {
-            $("#basariliYadaBasarisizKaydol").html("Şifreler Uyuşmuyor!").removeClass("text-danger")
-            $("#basariliYadaBasarisizKaydol").html("Başarılı!").addClass("text-success")
-        }
+            $("#basariliYadaBasarisizKaydol").html("Şifreler Uyuşmuyor!").removeClass("text-danger");
+            $("#basariliYadaBasarisizKaydol").html("Başarılı!").addClass("text-success");
+      }
     });
 
 </script>
@@ -226,12 +226,11 @@
     var x = $("#txtKullaniciAdi").val();
     var y= $("#txtSifre").val();
     var ikisiSorunlu=0;
-        var atpos=x.indexOf("@");//@ in kaçıncı indexte olduğunu bul.
-        var dotpos=x.lastIndexOf(".");//noktanın sondan kaçıncı index te olduğunu bul
+    var atpos=x.indexOf("@");//@ in kaçıncı indexte olduğunu bul.
+    var dotpos=x.lastIndexOf(".");//noktanın sondan kaçıncı index te olduğunu bul
 if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
   {
     $("#girisBasariliKontrol").html("Eposta Düzgün Girilmedi!");
-    
   return false;
   }
 else if(y.length<8){

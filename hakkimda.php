@@ -27,30 +27,30 @@
             <div class="Baslik"> HAKKIMDA </div> 
               <?php 
         
-        $sifre="g211210304";
-        $mail="g211210304@ogr.sakarya.edu.tr";
-        
-        if( $_POST['sifre']==$sifre){
-            
-            
-            if( $_POST['kullaniciAdi']==$mail){
-            ?> <br><h3>HOŞ GELDİN = </h3> <?php echo $mail;
-                sleep(5);
-                
-            }
-            else
-            {
-                
-                
-                echo'<script> alert("Sistemde kayitli olmayan mail adresi."); window.location="../../index.html"; </script> ';
-            }
-        }
-        else{
-            echo'<script> alert("Sistemde kayitli olmayan sifre veya mail adresi."); window.location="../../index.html"; </script> ';
-            echo'<script> window.location="../../index.html"; </script> ';
-        }
-        
-       ?>
+                    $sifre="g211210304";
+                    $mail="g211210304@sakarya.edu.tr";
+                    
+                    if( $_POST['sifre']==$sifre){
+                        
+                        
+                        if( $_POST['kullaniciAdi']==$mail){
+                        ?> <br><h3>HOŞ GELDİN = </h3> <?php echo $mail;
+                            sleep(5);
+                            
+                        }
+                        else
+                        {
+                            
+                            
+                            echo'<script> alert("Sistemde kayitli olmayan mail adresi."); window.location="../../index.html"; </script> ';
+                        }
+                    }
+                    else{
+                        echo'<script> alert("Sistemde kayitli olmayan sifre veya mail adresi."); window.location="../../index.html"; </script> ';
+                        echo'<script> window.location="../../index.html"; </script> ';
+                    }
+                    
+                ?>
             <div width="" style="background-color: black; color: white;">Kendimi tanıtan site içi linkli bilgiler, spor, etkinlik vb resimlerin anlatımı.</div>
             <div width="" style="background-color: blue; color: white;">sas</div>
          </div>
