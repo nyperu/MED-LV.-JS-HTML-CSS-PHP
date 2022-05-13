@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">   
     <link rel="stylesheet" href="css/main.css">
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark text-white navbar-expand-lg navbar-fixed-top">
@@ -39,40 +41,16 @@
                  
     </nav>
 </div>
-<div class="container">
-
-Mesaj iletildi. Mesaj içeriği =   <br>
-Adın soyadın    = <?php echo $_POST['AD'];
-if( $_POST['AD']==""){
-    echo "Ad ismi boş bırakılmıştır.";
-} ?><br>
-Mail = 
-<?php echo $_POST['MAIL']; 
-if( $_POST['MAIL']==""){
-    echo "MAIL boş bırakılmıştır.";
-}?> <br>
-Cinsiyetin = <?php echo $_POST['Cinsiyet']; ?> <br>
-Şehrin =    <?php echo $_POST['Sehir']; ?> <br>
-Mesaj =    <?php echo $_POST['Mesaj']; ?> <br>
-Dönüş tipi = <?php echo $_POST['donus']; ?> <br>
- 
-<?php  
-if (isset($_POST["dil"])) {
-    echo "Bildiğin diller = ";
-    foreach ($_POST["dil"] as $key => $value)
-    {
-        echo $value." "; 
-    }
-}
-else{
-    echo "Hiçbir dil bilmiyorsun.";
-}
-?> <br>
-
-
-</div>
-      <div class="footer fixed-bottom">
+    <div class="container " >
+        <div class="Ortala"> 
+       
+            <h1><strong>Amasra &#8216;ya Hoşgeldiniz</strong></h1>
+<p>Batı Karadeniz Bölgesinde, Bartın iline bağlı bir ilçe olan Amasra, denizden alınıp karaya verilen balıkların, doğadan alınıp insana verilen nimetlerin kapısını hep açık tutmaya çalışan insanların kentidir.</p>
+<p>Denize doğru uzanmış bir burun, burnun iki yanında korunaklı birer liman görevi gören iki koy ve ana karaya bağlı bağımsız adalarına sahip, 3000 yıllık tarihi, ağaç işçiliği ve balıkçılığa dayanan yerel sanatları ile Batı Karadeniz bölgesinin en gözde turizm mekanlarından biridir.</div></article></div></div></div></div><div class="vc_row wpb_row vc_inner row"><div class="wpb_column col-sm-6 col-md-7"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="box"><div class="details">
+<p></div></article></div></div></div><div class="wpb_column col-sm-6 col-md-5">
+    <div class="footer fixed-bottom">
         Sezer Berber - tüm hakları saklıfır falan.
-    </div>    
+    </div>
+        
 </body>
 </html>
