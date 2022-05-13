@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">   
     <link rel="stylesheet" href="css/main.css">
-    
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark text-white navbar-expand-lg navbar-fixed-top">
@@ -41,12 +40,20 @@
 </div>
     <div class="container">
         <div class="Ortala">
-            <div class="Baslik"> İLGİ ALANLARIM </div> 
-            <div width="" style="background-color: black; color: white;">İLGİ ALANLARI ÇERÇEVESİNDE BİR SAYFA VE 1 API KULLANIMI</div>
-            <div width="" style="background-color: blue; color: white;">sas</div>
+            <h1>RASTGELE GÜZEL SÖZLER</h1>
+            
+            <div id="kapsayici">
+            <h3 id="baslik">Atasözü ve Deyim Arama</h3>
+              <label for="aramaKutusu">Aranacak konuyu girin</label>
+              <input list="aramaListesi" id="aramaKutusu">
+              <datalist id="aramaListesi">
+                
+              </datalist>
+              <ul id="sonuc"></ul>
+            </div>
          </div>
         
     </div>
-        
+        <script src="js/kontroller.js" type="module"></script>
 </body>
 </html>

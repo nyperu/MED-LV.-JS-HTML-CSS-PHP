@@ -14,10 +14,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark text-white navbar-expand-lg navbar-fixed-top">
-        <div class="container py-2"><div>
-            <a href="index.html" class="navbar-brand">GİRİŞ YAP</a> 
-            
-        </div>
+        <div class="container py-2">
             
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-" aria-controls="navbar-">
                 <span class="navbar-toggler-icon"></span>
