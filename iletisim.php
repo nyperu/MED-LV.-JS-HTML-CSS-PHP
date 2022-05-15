@@ -71,8 +71,8 @@ else{
 
 
 </div>
-      <div class="footer fixed-bottom">
-        Sezer Berber - tüm hakları saklıfır falan.
-    </div>    
+<footer class="fixed-bottom bg-dark text-white mt-5">
+    Sezer Berber - tüm hakları saklıfır falan.
+</footer>  
 </body>
 </html>

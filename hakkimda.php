@@ -142,9 +142,9 @@
             </div>
          </div>       
     </div>
-    <div class="footer">
-        Sezer Berber - tüm hakları saklıfır falan.
-    </div>
+    <footer class="fixed-bottom bg-dark text-white mt-5">
+    Sezer Berber - tüm hakları saklıfır falan.
+</footer>
         
 </body>
 </html>
